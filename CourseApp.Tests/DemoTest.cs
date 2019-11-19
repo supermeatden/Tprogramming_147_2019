@@ -6,7 +6,7 @@ namespace CourseApp.Tests
     public class DemoTest
     {
         [Theory]
-        [InlineData(0, 0, 0, double.NaN)]
+        [InlineData(2.5, 4.6, 0, double.NaN)]
         [InlineData(1, 1, 2, 2.5)]
         [InlineData(-1, 1, 1, 0)]
         public void TestCalc(double a, double b, double x, double exp)
@@ -18,6 +18,8 @@ namespace CourseApp.Tests
         [Fact]
         public void TestNormalA()
         {
+            x = (Math.pow(a + b),2.5)/(1+Math.Log10(a + b * x));
+            return x;     
         }
 
         [Fact]
