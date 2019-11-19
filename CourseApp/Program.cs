@@ -6,7 +6,7 @@ namespace CourseApp
     {
         public static double MyFunction(double a, double b, double x)
         {
-            var c = (Math.pow(a + b),2.5)/(1+Math.Log10(a + b * x));
+            var c = (Math.Pow((a + b), 2.5)) / (1 + Math.Log10(a + b * x));
             return c;
         }
 
@@ -45,7 +45,6 @@ namespace CourseApp
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             var taskA = TaskA(2.5, 4.6, 1.1, 3.6, 0.5);
             Console.WriteLine(taskA);
 
@@ -53,18 +52,17 @@ namespace CourseApp
             {
                 Console.WriteLine($"y={taskA[i]}");
             }
-
-            var xB = new double[] {1.2 , 1.28, 1.36, 1.46, 2.35 };
+            var xB = new double[] {1.2 , 1.28, 1.36, 1.46, 2.35};
             var taskB = TaskB(2, 3, xB);
             for (var i = 0; i < xB.Length; i++)
             {
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
 
-            var item = new Platypus();
+           /* var item = new Platypus();
             Console.WriteLine(item.View());
 
-            Console.ReadLine();
+            Console.ReadLine();*/
         }
     }
 }
