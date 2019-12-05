@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace CourseApp.Tests
@@ -6,8 +7,8 @@ namespace CourseApp.Tests
     public class DemoTest
     {
         [Theory]
-        [InlineData(2.5, 4.6, 0.5, double.Y)]
-        [InlineData(1, 1, 2, 2.5)]
+        [InlineData(2.5, 4.6, 0.5, 79.894)]
+        [InlineData(1, 1, 2, 3.83)]
         [InlineData(-1, 1, 1, 0)]
         public void TestCalc(double a, double b, double x, double exp)
         {
@@ -18,34 +19,24 @@ namespace CourseApp.Tests
         [Fact]
         public void TestNormalA()
         {
-         Var   res = (Math.Pow(a + b), exp)/(1+Math.Log10(a + b * x));
-            return res;     
+            var res = Program.TaskA(1, 2, 3, 4, 1);
+            var len = res.Count;
+            Assert.Equal(1, len);
         }
 
         [Fact]
-        public void TestNormalB(
-                                 double a,
-                                 double b,
-                                 double[] x);
+        public void TestNormalB()
         {
-            
-            var y = new double[x.Length];
-            for (int i = 0; i < x.Length; i++)
-            {
-                Random rnd = new Random();
-                a = rnd.Next(1.2,2.3)
-                b = rnd.Next(1.2,2.3)
-                y[i] = MyFunction(a, b, x[i]);
-            }
-            
-            Var   res = (Math.Pow((a + b), exp)) / (1 + Math.Log10(a + b * x));
-            return res; 
+           var xB = new List<double> { 1.2, 1.28, 1.36, 1.46, 2.35 };
+           var res = Program.TaskB(0.3, 1, xB);
+            var len = res.Count;
+            Assert.Equal(5, len);
         }
 
         [Fact]
         public void TestZeroLengthB()
         {
-            var res = Program.TaskB(1, 1, new double[0]);
+            var res = Program.TaskB(1, 1, new List<double>());
             Assert.Empty(res);
         }
     }
