@@ -11,7 +11,7 @@ namespace CourseApp
             return c;
         }
 
-        public static List<double> TaskA (
+        public static List<double> TaskA(
                                      double a,
                                      double b,
                                      double xn,
@@ -30,7 +30,7 @@ namespace CourseApp
             return y;
         }
 
-        public static List<double> TaskB (
+        public static List<double> TaskB(
                                  double a,
                                  double b,
                                  List<double> x)
