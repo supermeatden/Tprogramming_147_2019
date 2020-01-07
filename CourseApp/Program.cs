@@ -60,6 +60,9 @@ namespace CourseApp
             {
                 Console.WriteLine($"x={xB[i]} y={taskB[i]}");
             }
+
+            var ageDenis = new DateTimes();
+            Console.WriteLine(ageDenis.CulculateAge(2000, 6, 22));
         }
     }
 }
